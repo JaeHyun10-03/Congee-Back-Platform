@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+}
+
+/* Base Variables (Defaults) */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+  --font-primary: var(--font-kb); /* Default Font */
+}
+
+/* KB Kookmin Bank */
+[data-theme="kb"] {
+  --primary: #FFBC00; /* KB Yellow Positive */
+  --primary-foreground: #60584C; /* KB Gray */
+  --secondary: #545045; /* KB Dark Gray */
+  --secondary-foreground: #ffffff;
+  --background: #ffffff;
+  --foreground: #60584C; /* KB Gray */
+  --font-primary: var(--font-kb);
+}
+
+/* Shinhan Bank */
+[data-theme="shinhan"] {
+  --primary: #0046FF; /* Shinhan Blue */
+  --primary-foreground: #ffffff;
+  --secondary: #8CD2F5; /* Light Blue */
+  --secondary-foreground: #00236E; /* Navy Blue */
+  --background: #ffffff;
+  --foreground: #000000;
+  --font-primary: var(--font-shinhan);
+}
+
+/* Hana Bank */
+[data-theme="hana"] {
+  --primary: #008485; /* Hana Green */
+  --primary-foreground: #ffffff;
+  --secondary: #AD9A5F; /* Hana Gold */
+  --secondary-foreground: #000000;
+  --background: #ffffff;
+  --foreground: #000000;
+  --font-primary: var(--font-hana);
+}
+
+/* Woori Bank */
+[data-theme="woori"] {
+  --primary: #0033AC; /* Woori Deep Blue */
+  --primary-foreground: #ffffff;
+  --secondary: #32C4F4; /* Woori Light Blue */
+  --secondary-foreground: #000000;
+  --background: #ffffff;
+  --foreground: #0033AC; /* Woori Deep Blue */
+  --font-primary: var(--font-woori);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-primary), var(--font-noto-sans-kr), Arial, Helvetica, sans-serif;
+}
